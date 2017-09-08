@@ -1,0 +1,16 @@
+syntax = "proto3";
+package api;
+
+message Error {
+    int64 code = 1;
+    string message = 2;
+    bool temporary = 3;
+    enum UserErrorCode {
+      UNKNOWN = 0;
+      NO_SUCH_USER = 1;
+      DUPLICATE_USER_ID = 2;
+      DB_CONNECTION = 3;
+    }
+    UserErrorCode user_error_code = 4;
+}
+

@@ -1,0 +1,17 @@
+package: github.com/upamune/grpc-error-sample
+import:
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/pkg/errors
+  version: ^0.8.0
+- package: golang.org/x/net
+  version: 3470a06c1357df533e251f14d3a181f67396fe35
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: ^1.6.0
+  subpackages:
+  - codes
+  - metadata
+  - status
